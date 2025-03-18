@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastrar Emoções</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div class="header-gim">
+        <div>
+            <div class="ifsul2">IFSul Campus Venâncio Aires</div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
+
+        <div class="content">
+
+            <div id="cadastro">
+
+                <form method="post" action="cadastroEmocoes.php">
+                    <h1>Cadastro de Emoções</h1>
+
+                    <p>
+                        <label for="tipoEmocao">Tipo da emoção</label>
+                        <input id="tipoEmocao" name="tipoEmocao" required="required" type="text" placeholder="Emoção" />
+                    </p>
+
+                    <p>
+                        <label for="dataEmocao">Data da emoção</label>
+                        <input id="dataEmocao" name="dataEmocao" required="required" type="date" placeholder="Data" />
+                    </p>
+                    <p>
+                        <input type="submit" value="Cadastrar" />
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

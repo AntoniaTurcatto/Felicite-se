@@ -1,0 +1,175 @@
+body {
+    background-color: #faecfa; /* Cor de fundo desejada para a tela inteira */
+    margin: 0; /* Removendo a margem padrão do body */
+  }
+
+/* Estilo da tabela */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Estilo do cabeçalho da tabela */
+th {
+    background-color: #3d9db3;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Estilo das células da tabela */
+td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Aumentando o padding para melhorar o espaçamento interno */
+}
+
+/* Estilo das linhas alternadas para melhor legibilidade */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para as linhas ímpares (quando necessário) */
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Pode ajustar a cor de fundo conforme necessário */
+}
+
+#titulo-para-aprovar{
+    height: 60px;
+    width: fit-content;
+    margin-left: 27%;
+    margin-top: 3%;
+    font-size: 32px;
+    color: rgb(65, 65, 65);
+}
+
+.botaoAprovar{
+    font-family: "Barlow Condensed", Arial;
+    margin-bottom: 1%;
+    background-color: #48ac2a;
+    color: #fff;
+}
+/* Estilo do botão de cadastro */
+.cadastro-botao {
+    height: 60px;
+    width: 150px;
+    margin-left: 78.5%;
+    margin-top: 3%;
+    background-color: #3d9db3;
+    border: 2px solid #3d9db3;
+    color: #fff;
+    border-radius: 8px; /* Borda arredondada */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+    /* Adicionando uma transição suave */
+
+    /* Adicionando sombra */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Adicionando estilos de hover */
+.cadastro-botao:hover {
+    background-color: #358c9e;
+    border-color: #358c9e;
+    color: #fff;
+    transform: translateY(-2px); /* Elevação suave ao passar o mouse */
+}
+
+/* Adicionando um padrão de tamanho de linhas */
+.tabela-scroll tbody tr {
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+.editar-botao,
+.excluir-botao,
+.aprovar-botao,
+.visualizar-botao {
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.editar-botao {
+    background-color: #ffcc00; /* Amarelo */
+    color: #fff;
+}
+
+.excluir-botao {
+    background-color: #ff4500; /* Vermelho */
+    color: #fff;
+}
+
+.aprovar-botao{
+    background-color: #00b126; /* VERDE */
+    color: #fff;
+}
+
+.visualizar-botao{
+    background-color: #00c5df; /* AZUL PISCINA */
+    color: #fff;
+}
+
+/* Adicionando estilos de hover */
+
+.visualizar-botao:hover{
+    background-color: #4c759c; /* AZUL mais escuro para aprovar*/
+    transform: translateY(-2px); /* Elevação suave ao passar o mouse */
+}
+
+.aprovar-botao:hover{
+    background-color: #004e0a; /* Verde mais escuro para aprovar*/
+    transform: translateY(-2px); /* Elevação suave ao passar o mouse */
+}
+
+.editar-botao:hover,
+.excluir-botao:hover {
+    background-color: #c0a300; /* Amarelo mais escuro para editar e vermelho mais escuro para excluir */
+    transform: translateY(-2px); /* Elevação suave ao passar o mouse */
+}
+
+.table-container {
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 20px;
+}
+
+#alterar {
+    background-image: url('../imagem/editar-branco.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center 63%;
+  }
+
+  #excluir {
+    background-image: url('../imagem/excluir-branco.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center 63%;
+  }
+
+  #aprovar{
+    background-image: url('../imagem/aprovar-branco.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center 63%;
+  }
+
+  #visualizar{
+    background-image: url('../imagem/visualizar-branco.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center 63%;
+  }

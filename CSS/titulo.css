@@ -1,0 +1,21 @@
+
+
+h2 {
+	font-size: 60px;
+	-webkit-text-fill-color: whitesmoke; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: darkgrey;
+	text-transform: uppercase;
+	line-height: 80%;
+    font-family: "Barlow Condensed", Arial;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.aqua {
+	text-shadow: 2px 2px white, 8px 10px rgb(110, 191, 245);
+}
+
+.pink {
+	text-shadow: 2px 2px white, 8px 10px hotpink;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastrar Usuário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>
+        function handleStatusChange() {
+    var status = document.querySelector('input[name="status"]:checked').value;
+
+    var matriculaEstudanteInput = document.getElementById('matriculaEstudante');
+    var matriculaServidorInput = document.getElementById('matriculaServidor');
+    var cargoServidorInput = document.getElementById('cargoServidor');
+    var siapeServidorInput = document.getElementById('siapeServidor');
+
+    if (status === 'estudante') {
+        // Desabilita os campos do servidor
+        matriculaServidorInput.disabled = true;
+        cargoServidorInput.disabled = true;
+        siapeServidorInput.disabled = true;
+
+        // Habilita o campo do estudante
+        matriculaEstudanteInput.disabled = false;
+
+        // Torna os campos desabilitados mais cinza
+        matriculaServidorInput.style.backgroundColor = "lightgrey";
+        cargoServidorInput.style.backgroundColor = "lightgrey";
+        siapeServidorInput.style.backgroundColor = "lightgrey";
+        matriculaEstudanteInput.style.backgroundColor = "";  // Corrigido aqui
+    } else if (status === 'servidor') {
+        // Desabilita o campo do estudante
+        matriculaEstudanteInput.disabled = true;
+
+        // Habilita os campos do servidor
+        matriculaServidorInput.disabled = false;
+        cargoServidorInput.disabled = false;
+        siapeServidorInput.disabled = false;
+
+        // Torna os campos desabilitados mais cinza
+        matriculaServidorInput.style.backgroundColor = "";
+        cargoServidorInput.style.backgroundColor = "";
+        siapeServidorInput.style.backgroundColor = "";
+        matriculaEstudanteInput.style.backgroundColor = "lightgrey";
+    } else if(status === 'admin'){
+        //habilita apenas email e senha, para não haver inconsistência nos dados,
+        //pois pode ser estudante ou servidor e será usado apenas para acessar o site.
+        matriculaEstudanteInput.disabled = true;
+        matriculaServidorInput.disabled = true;
+        cargoServidorInput.disabled = true;
+        siapeServidorInput.disabled = true;
+        // pinta os campos de branco
+        matriculaServidorInput.style.backgroundColor = "lightgrey";
+        cargoServidorInput.style.backgroundColor = "lightgrey";
+        siapeServidorInput.style.backgroundColor = "lightgrey";
+        matriculaEstudanteInput.style.backgroundColor = "lightgrey";
+    }
+}
+
+    </script>
+</head>
+<body>
+    <div class="header-gim">
+        <div>
+            <div class="ifsul2">IFSul Campus Venâncio Aires</div>
+        </div>
+        
+    </div>
+    
+
+    <div class="container" >
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
+        
+        <div class="content">      
+  
+        <div id="cadastro">
+
+            <form method="post" action="cadastroUsuario.php"> 
+                <h1>Cadastro de Usuários</h1> 
+                
+                <p> 
+                    <label for="nomeUsuario">Nome</label>
+                    <input id="nomeUsuario" name="nomeUsuario" required="required" type="text" placeholder="nome" />
+                </p>
+
+
+                <p>
+                    <label>Gênero:</label>
+                    <input type="radio" name="genero" value="masculino"> Masculino
+                    <input type="radio" name="genero" value="feminino"> Feminino
+                </p>
+        
+                <p>
+                    <label>O usuário é:</label>
+                    <input type="radio" name="status" value="estudante" onchange="handleStatusChange()"> Estudante
+                    <input type="radio" name="status" value="servidor" onchange="handleStatusChange()"> Servidor
+                    <input type="radio" name="status" value="admin" onchange="handleStatusChange()"> Admin
+                </p>
+                <p> 
+                    <label for="emailUsuario">E-mail</label>
+                    <input id="emailUsuario" name="emailUsuario" required="required" type="email" placeholder="e-mail" /> 
+                </p>
+                
+                <p> 
+                    <label for="senhaUsuario">Senha</label>
+                    <input id="senhaUsuario" name="senhaUsuario" required="required" type="password" placeholder="senha"/>
+                </p>
+
+                <p> 
+                    <label for="matriculaEstudante">Matrícula do estudante</label>
+                    <input id="matriculaEstudante" name="matriculaEstudante"  type="text" placeholder="matricula" />
+                </p>
+
+                <p> 
+                    <label for="matriculaServidor">Matrícula do servidor</label>
+                    <input id="matriculaServidor" name="matriculaServidor"  type="text" placeholder="matricula" />
+                </p>
+
+                    <p> 
+                    <label for="cargoServidor">Cargo do servidor</label>
+                    <input id="cargoServidor" name="cargoServidor"  type="text" placeholder="cargo" />
+                </p>
+                    <p> 
+                    <label for="siapeServidor">Siape do servidor</label>
+                    <input id="siapeServidor" name="siapeServidor"  type="text" placeholder="siape" />
+                </p>
+
+                <p> 
+                    <input type="submit" value="Cadastrar"/> 
+                </p>
+            </form>
+        </div>
+        </div>
+    </div>  
+</body>
+</html>

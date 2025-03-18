@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastrar Filmes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div class="header-gim">
+        <div>
+            <div class="ifsul2">IFSul Campus Venâncio Aires</div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
+
+        <div class="content">
+
+            <div id="cadastro">
+                <form method="post" action="cadastroTematicas.php" enctype="multipart/form-data">
+
+                    <h1>Cadastro de Temáticas</h1>
+
+                    <p>
+                        <label for="nomeConteudo">Nome</label>
+                        <input id="nomeConteudo" name="nomeConteudo" required="required" type="text"
+                            placeholder="Nome" />
+                    </p>
+
+                    <p>
+                        <label for="descricaoConteudo">Descrição</label>
+                        <input id="descricaoConteudo" name="descricaoConteudo" required="required" type="text"
+                            placeholder="Descrição" />
+                    </p>
+
+                    <p>
+                        <label for="imagemTematica">Imagem</label>
+                        <input type="file" name="arquivo_imagem" required="required" placeholder="Imagem">
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Cadastrar" />
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
